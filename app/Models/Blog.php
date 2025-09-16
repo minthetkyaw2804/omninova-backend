@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Blog extends Model
 {
+
+    // HELLO WOLRD!
     use SoftDeletes;
 
     protected $fillable = [
