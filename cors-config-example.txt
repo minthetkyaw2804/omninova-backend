@@ -1,0 +1,17 @@
+# CORS Configuration
+# Add these to your .env file for proper CORS setup
+
+# Sanctum stateful domains (for frontend origins)
+SANCTUM_STATEFUL_DOMAINS="localhost:3000,localhost:5173,10.60.34.20:3000,162.84.221.20,162.84.221.20:3000,162.84.221.20:5173,162.84.221.21,162.84.221.21:3000,162.84.221.21:5173"
+
+# Session domain (should match your API domain)
+SESSION_DOMAIN=162.84.221.21
+
+# App URL (your Laravel API URL)
+APP_URL=http://162.84.221.21
+
+# Frontend URL (for reference)
+FRONTEND_URL=http://162.84.221.20
+
+# CORS specific settings (optional - handled in config/cors.php)
+CORS_ALLOWED_ORIGINS="http://localhost:3000,http://localhost:5173,http://10.60.34.20:3000,http://162.84.221.20,http://162.84.221.20:3000,http://162.84.221.20:5173,http://162.84.221.21,http://162.84.221.21:3000,http://162.84.221.21:5173"
