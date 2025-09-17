@@ -105,7 +105,7 @@ class AdminProjectController extends Controller
         $user = Auth::user();
 
         $validatedData = $request->validate([
-            'type_name' => 'required|unique:project_types,type_name',
+            'type_name' => 'required|unique:project_types,type_name,NULL,id,deleted_at,NULL',
             'description' => 'required',
         ]);
 
@@ -196,7 +196,7 @@ class AdminProjectController extends Controller
         $user = Auth::user();
 
         $validatedData = $request->validate([
-            'type_name' => 'requiredunique:project_types,type_name',
+            'type_name' => 'requiredunique:project_types,type_name' . $projectType->id . ',id,deleted_at,NULL',
             'description' => 'required',
         ]);
 

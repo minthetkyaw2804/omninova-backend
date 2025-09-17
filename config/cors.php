@@ -23,9 +23,8 @@ return [
     'allowed_origins' => array_filter([
         env('FRONTEND_URL'),
         str_replace('http://', 'https://', env('FRONTEND_URL')),
-        'http://localhost:3031',
-        'http://localhost:3030',
-        'http://localhost:5173',
+        'http://localhost:5000',
+        'http://localhost:5001',
         'http://10.60.34.20:3000',
         'http://10.60.34.20',
         'http://162.84.221.20',
