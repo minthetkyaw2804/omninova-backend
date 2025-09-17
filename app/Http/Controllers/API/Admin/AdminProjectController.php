@@ -196,7 +196,7 @@ class AdminProjectController extends Controller
         $user = Auth::user();
 
         $validatedData = $request->validate([
-            'type_name' => 'requiredunique:project_types,type_name' . $projectType->id . ',id,deleted_at,NULL',
+            'type_name' => 'requiredunique:project_types,type_name,' . $projectType->id . ',id,deleted_at,NULL',
             'description' => 'required',
         ]);
 
